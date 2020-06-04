@@ -94,10 +94,7 @@ syn match haskellIdentifier "[_a-z][a-zA-z0-9_']*" contained
 syn match haskellChar "\<'[^'\\]'\|'\\.'\|'\\u[0-9a-fA-F]\{4}'\>"
 syn match haskellType "\<[A-Z][a-zA-Z0-9_']*\>"
 syn region haskellBlockComment start="{-" end="-}"
-  \ contains=
-  \ haskellBlockComment,
-  \ haskellTodo,
-  \ @Spell
+  \ contains=@Spell
 syn region haskellPragma start="{-#" end="#-}"
 syn region haskellLiquid start="{-@" end="@-}"
 syn match haskellPreProc "^#.*$"
